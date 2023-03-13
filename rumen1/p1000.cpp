@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    // 注意打印
     cout <<
     "                ********" << endl <<
     "               ************" << endl <<
