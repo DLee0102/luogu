@@ -35,7 +35,7 @@ using namespace std;
 
 // }
 
-// 桶排
+// 桶排，又叫位排序
 int main()
 {
     int a[1000] = {0};
