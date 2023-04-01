@@ -5,7 +5,10 @@ using namespace std;
 
 int main()
 {
-    char s;
-    s = '1';
-    cout << (int)s;
+    int a = 2;
+    while (a > 0)
+    {
+        a = a * 100;
+        cout << a << endl;
+    }
 }

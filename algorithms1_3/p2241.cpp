@@ -33,4 +33,5 @@ int main()
     }
     cout << nperf << " " << msquare;
 
+    return 0;
 }

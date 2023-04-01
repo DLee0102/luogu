@@ -45,4 +45,6 @@ int main()
     }
     dfs(0, 0, 0);
     cout << counts;
+
+    return 0;
 }
