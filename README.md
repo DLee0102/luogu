@@ -15,4 +15,14 @@
    - `cin >>` 最简单的一种输入方式，特点是对于接受输入的变量可以看碟下菜，以空格、回车为间隔符，读入时直接忽略间隔符并保留在缓存区。`cin >> `的返回值是检查输入和变量类型是否匹配的布尔值，故有此种用法`while(cin >> input)`当跳出while时cin的流状态至少有一项被置为false，后续若要继续调用 `cin` 则需进行更复杂的操作（详见书p615）;
    - `cin.get()` 可以读取一个输入的字符，特点是可读入任何字符（包括回车和空格，故可用于while循环判断输入是否结束）；有两种基本使用格式：`ch = cin.get()`(将输入转换成整型)、`cin.get(ch)`（直接读入输入字符）；完整的形参表为：`cin.get(char *, int, char)` 对应存储字符，最大读入长度+1，分界符字符；只带两个参数时默认以回车为分界符，并将回车留在缓存区中（不读入；和getline读入回车并转换为'\0'对比）;
    - `cin.getline()` 
-   - 
+
+     geometry_msgs::msg::Vector3Stamped test_point_target, test_armor_target_tf;
+    auto test_armor_msg = tracker_->tracked_armor;
+    test_point_target.vector.x = test_armor_msg.pose.position.x;
+    test_point_target.vector.y = test_armor_msg.pose.position.y;
+    test_point_target.vector.z = test_armor_msg.pose.position.z;
+    tf2::doTransform(test_point_target, test_armor_target_tf, transform_pitch);
+    Eigen::Vector3d test_armor_target_pitch_link;
+    test_armor_target_pitch_link(0) = test_armor_target_tf.vector.x;
+    test_armor_target_pitch_link(1) = test_armor_target_tf.vector.y;
+    test_armor_target_pitch_link(2) = test_armor_target_tf.vector.z;
